@@ -1,0 +1,156 @@
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: lawngreen;
+  min-height: 100%;
+}
+
+.grid-container {
+  /*margin: 15px;*/
+  display: grid;
+  gap: 10px;
+  grid-template: 
+  "header header header" 46px
+  "titulo titulo titulo" 500px
+  "contenido contenido sidebar"
+  "footer footer footer" / 
+ auto 70% auto; 
+
+}
+
+
+.menu {
+  display: grid;
+  grid-area: header;
+  align-content: center;
+  justify-content: center;
+  color: white;
+  background-color: slategray;
+}
+.menu ul a {
+  margin: 10px;
+  color: white;
+  font-size: 25px;
+}
+
+.title {
+  grid-area: titulo;
+  text-align: center;
+  background-color: blue;
+}
+
+.contenido {
+  grid-area: contenido;
+  gap: 10px;
+  color: white;
+  background-color: chocolate;
+}
+.contenido article {
+  /*margin: 10px;*/
+  background-color: dodgerblue;
+  
+}
+.sidebar {
+  grid-area: sidebar;
+  color: white;
+  background-color: darkmagenta;
+}
+
+.footer {
+  grid-area: footer;
+  text-align: center;
+  color: white;
+  background-color: black;
+}
+
+
+
+
+
+
+
+
+/*************************   MEDIAS QUERIES *********************************/
+
+
+/****************************  RESPONSIVE PARA MOVILES ****************************/
+
+@media screen and (max-width: 320px) {
+  .grid-container {
+    grid-template: 
+    "header"
+    "titulo"
+    "contenido"
+    "sidebar"
+    "footer";
+  }
+  }
+
+@media screen and (max-width: 576px ) {
+  .grid-container {
+    grid-template: 
+    "header"
+    "titulo"
+    "contenido"
+    "sidebar"
+    "footer";
+  }
+  }
+
+  @media screen and (max-width: 600px ) {
+    .grid-container {
+      grid-template: 
+      "header"
+      "titulo"
+      "contenido"
+      "sidebar"
+      "footer";
+    }
+    }
+
+
+
+
+/****************************  RESPONSIVE TABLETAS ****************************/
+
+
+
+  @media screen and (min-width: 768px ) {
+    
+    .grid-container {
+      display: grid;
+      grid-template: 
+        "header header"
+        "titulo titulo" 
+        "contenido sidebar"
+        "footer footer" /
+        60%; 
+    }
+  }
+
+/*******************RESPONSIVE PANTALLAS O DISPOSITIVOS GRANDES ****************************/
+
+
+  @media screen and (min-width: 1200px) {
+    
+    .grid-container {
+      display: grid;
+
+      grid-template: 
+        "header header header" 46px
+        "titulo titulo titulo" 500px
+        "contenido contenido sidebar"
+        "footer footer footer" / 
+        auto 65% auto; 
+    }
+    .contenido {
+      display: grid;
+      grid-template-columns: auto auto;
+    }
+
+  }
+
+
